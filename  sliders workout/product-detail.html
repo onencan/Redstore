@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Product Detail page</title>
+    <!-----------stylesheet-------->
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" type="text/css" href="css/lightslider.css" />
+    <!--------------jQuery------------------->
+    <script src="js/jQuery.js"></script>
+    <!--------light-slider-js--------->
+    <script src="js/lightslider.js"></script>
+    <!--------fav-icon-->
+    <link rel="shortcut icon" href="/images/productss/favicon.ico" />
+    <!------------using font-awesome-->
+    <link
+      rel="stylesheet"
+      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+      integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+      crossorigin="anonymous"
+    />
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+      integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="/css/style.css" />
+    <style>
+      .small-img-group {
+        display: flex;
+        justify-content: space-between;
+      }
+      .small-img-col {
+        flex-basis: 25%;
+        cursor: pointer;
+      }
+      .sproduct select {
+        display: block;
+        padding: 5px 10px;
+      }
+      .sproduct input {
+        width: 
+        50px;
+        height: 40px;
+        padding-left: 10px;
+        font-size: 16px;
+        margin-right: 10px;
+      }
+      .sproduct input:focus {
+        outline: none;
+      }
+      .buy-btn {
+        background: coral;
+        opacity: 1;
+        transition: 0.3s all;
+      }
+      .buy-btn:hover {
+        color: #fff;
+        transition: 0.3s all;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-----nagivation------------------>
+    <nav class="fix-nav">
+      <!------------Social-link-and-phone-number--------------->
+      <div class="social-call">
+        <!-------social-links-->
+        <div class="social">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-youtube"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+        </div>
+        <!--------phone-number--------->
+        <div class="phone">
+          <span>call +256779154585</span>
+        </div>
+      </div>
+      <!--------------------------menu-bar---------->
+      <div class="navigation">
+        <!-----------------logo------------->
+        <a href="index.html" class="logo">
+          <img
+            src="/images/productss/red store.png"
+            alt="Redstore online shopping company"
+          />
+        </a>
+        <!-------------menu---------------->
+        <ul class="menu">
+          <li><a href="index.html">Home</a></li>
+          <li>
+            <a href="men.html">Men</a>
+            <!--------sale-lable--------------------->
+            <span class="sale-lable">Sale</span>
+          </li>
+
+          <li><a href="/women.html">Women</a></li>
+          <li><a href="#">Kids</a></li>
+          <li><a href="#">About us</a></li>
+        </ul>
+        <!---------------------right-menu--------->
+        <div class="right-menu">
+          <!------------------search-->
+          <a href="#" class="search">
+            <i class="fas fa-search"></i>
+          </a>
+          <!------------------user-->
+          <a href="javascript:void(0)" class="user">
+            <i class="fas fa-user"></i>
+          </a>
+          <a href="cart.html">
+            <!------------------cart-->
+            <i class="fas fa-shopping-cart">
+              <!--------------------number-of-product-in-cart-->
+              <span class="num-cart-product">0</span>
+            </i>
+          </a>
+        </div>
+      </div>
+    </nav>
+    <!-----------------------search-bar-------------->
+    <div class="search-bar">
+      <!-----------------search-input----------->
+      <div class="search-input">
+        <!--------input----->
+        <input type="text" placeholder="Search for Product" />
+        <!-------------------------cancel-btn----->
+        <a href="" class="search-cancel">
+          <i class="fas fa-times"></i>
+        </a>
+      </div>
+    </div>
+
+    <!-----------------login-and-sign-up-form---------------->
+    <div class="form">
+      <!---------login------>
+      <div class="login-form">
+        <!------------------------cancel-btn----------------------->
+        <a href="#" class="form-cancel">
+          <i class="fas fa-times"></i>
+        </a>
+        <!-----heading----------->
+        <strong>Log In</strong>
+        <!----------input------>
+        <form>
+          <input
+            type="email"
+            placeholder="Example@gmail.com"
+            name="email"
+            required
+          />
+          <input
+            type="password"
+            placeholder="password"
+            name="password"
+            required
+          />
+
+          <!----------submit-btn--------->
+          <input type="submit" value="Log In" />
+        </form>
+
+        <!---------------forget-and-sign-up--------------------->
+        <div class="form-btns">
+          <a href="#" class="forget">Forget your password</a>
+          <a href="javascript:void(0)" class="sign-up-btn">Create Account</a>
+        </div>
+      </div>
+
+      <!---------sign up--------------->
+      <div class="sign-up-form">
+        <!------------------------cancel-btn----------------------->
+        <a href="#" class="form-cancel">
+          <i class="fas fa-times"></i>
+        </a>
+        <!-----heading----------->
+        <strong>Sign Up</strong>
+        <!----------input------>
+        <form>
+          <input type="text" placeholder="Full Name" name="fullname" required />
+          <input
+            type="email"
+            placeholder="Example@gmail.com"
+            name="email"
+            required
+          />
+          <input
+            type="password"
+            placeholder="password"
+            name="password"
+            required
+          />
+
+          <!----------submit-btn--------->
+          <input type="submit" value="Sign Up" />
+        </form>
+
+        <!---------------forget-and-sign-up--------------------->
+        <div class="form-btns">
+          <a href="javascript:void(0)" class="already-account"
+            >Already Have Account?</a
+          >
+        </div>
+      </div>
+    </div>
+
+    <section class="container sproduct my-">
+      <div class="row mt-5">
+        <div class="col-1g-5 col-md-5 col-5">
+          <img
+            class="img-fluid w-100 pb-1"
+            src="/images/products/gallery-1.jpg"
+            id="MainImg"
+          />
+
+          <div class="small-img-group">
+            <div class="small-img-col">
+              <img
+                src="/images/products/gallery-2.jpg"
+                width="100%"
+                class="small-img"
+                alt=""
+              />
+            </div>
+            <div class="small-img-col">
+              <img
+                src="/images/products/gallery-3.jpg"
+                width="100%"
+                class="small-img"
+                alt=""
+              />
+            </div>
+            <div class="small-img-col">
+              <img
+                src="/images/products/gallery-4.jpg"
+                width="100%"
+                class="small-img"
+                alt=""
+              />
+            </div>
+            <div class="small-img-col">
+              <img
+                src="/images/products/gallery-1.jpg"
+                width="100%"
+                class="small-img"
+                alt=""
+              />
+            </div>
+          </div>
+        </div>
+        <div class="col-1g-5 col-md-5 col-5">
+          <h6>Home / Tshirt</h6>
+          <h3 class="py-3">Men's Fashion T Shirt</h3>
+          <h2>ugx 25,000</h2>
+          <select class="my-3">
+            <option>Select Size</option>
+            <option>XL</option>
+            <option>XXL</option>
+            <option>Small</option>
+            <option>Large</option>
+          </select>
+          <input type="number" name="1" required />
+          <a href="cart.html"><button class="buy-btn">Add To Cart</button></a>
+          <h4 class="mt-5 mb-4">Product Details</h4>
+          <span
+            >Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut nobis
+            ab atque veniam quidem animi accusamus voluptate iure eum repellat,
+            recusandae, velit culpa. Repellat provident, sit omnis nostrum
+            impedit facilis quam vel quidem eaque molestiae maiores ab qui
+            veniam hic quas ad amet iusto id quasi alias cumque. Aliquid magnam
+            cupiditate sequi accusantium nesciunt quod eveniet laudantium
+            similique, doloribus natus!</span
+          >
+        </div>
+      </div>
+    </section>
+
+    <!-----------heading----------->
+    <div class="arrival-heading">
+      <strong>Related Products</strong>
+    </div>
+
+    <!--------------------product-container-------->
+    <div class="product-container">
+      <!---------------product-box-1------------>
+      <div class="product-box">
+        <!--img---------------->
+        <div class="product-img">
+          <!------------add-cart---------->
+          <a href="cart.html" class="add-cart">
+            <i class="fas fa-shopping-cart"></i>
+          </a>
+          <img src="/images/products/p-1.png" alt="" />
+        </div>
+        <!---------------details----------->
+        <div class="product-details">
+          <a href="product-detail.html" class="p-name">Drawstring T-shirt</a>
+          <span class="p-price">ugx 25,000</span>
+        </div>
+      </div>
+      <!---------------product-box-2------------>
+      <div class="product-box">
+        <!--img---------------->
+        <div class="product-img">
+          <!------------add-cart---------->
+          <a href="cart.html" class="add-cart">
+            <i class="fas fa-shopping-cart"></i>
+          </a>
+          <img src="/images/products/p-2.png" alt="" />
+        </div>
+        <!---------------details----------->
+        <div class="product-details">
+          <a href="product-detail.html" class="p-name">Drawstring T-shirt</a>
+          <span class="p-price">ugx 25,000</span>
+        </div>
+      </div>
+      <!---------------product-box-3------------>
+      <div class="product-box">
+        <!--img---------------->
+        <div class="product-img">
+          <!------------add-cart---------->
+          <a href="cart.html" class="add-cart">
+            <i class="fas fa-shopping-cart"></i>
+          </a>
+          <img src="/images/products/p-3.png" alt="" />
+        </div>
+        <!---------------details----------->
+        <div class="product-details">
+          <a href="product-detail.html" class="p-name">Drawstring T-shirt</a>
+          <span class="p-price">ugx 25,000</span>
+        </div>
+      </div>
+      <!---------------product-box-4------------>
+      <div class="product-box">
+        <!--img---------------->
+        <div class="product-img">
+          <!------------add-cart---------->
+
+          <a href="products.html"><h1 class="arrow">VIEW ALL</h1></a>
+        </div>
+        <!---------------details----------->
+        <div class="product-details">
+          <a href="products.html" class="p-name"> See All </a>
+          <span class="p-price"> <br /> </span>
+        </div>
+      </div>
+    </div>
+
+    <!----------------------services----------------------->
+    <section class="services">
+      <!------------------services-box-1-------------->
+      <div class="services-box">
+        <i class="fas fa-shipping-fast"></i>
+        <span>Free Shipping </span>
+        <p>For all UG orders</p>
+      </div>
+      <!------------------services-box-2-------------->
+      <div class="services-box">
+        <i class="fas fa-headphones-alt"></i>
+        <span>We Support 24/7</span>
+        <p>We support 24h a day</p>
+      </div>
+      <!------------------services-box-3-------------->
+      <div class="services-box">
+        <i class="fas fa-sync"></i>
+        <span>100% Money </span>
+        <p>You have 30 days to Return</p>
+      </div>
+    </section>
+
+    <!-------------------footer-------------------->
+    <footer>
+      <!----------copyright---------->
+      <span class="copyright">
+        Copyright 2021 RedStore online Shopping Company
+      </span>
+      <!--------subscribe-------->
+      <div class="subscribe">
+        <form>
+          <input type="email" placeholder="Example@gmail.com" required />
+          <input type="submit" value="Subscribe" />
+        </form>
+      </div>
+    </footer>
+    <!--------------------------script----------------->
+    <script type="text/javascript">
+      /*------------for search bar-----------*/
+      $(document).on("click", ".search", function () {
+        $(".search-bar").addClass("search-bar-active");
+      });
+
+      $(document).on("click", ".search-cancel", function () {
+        $(".search-bar-cancel").removeClass("search-bar-active");
+      });
+
+      /*--------------login-sign-up-form-------------*/
+      $(document).on("click", ".user,.already-account", function () {
+        $(".form").addClass("login-active").removeClass("sign-up-active");
+      });
+
+      $(document).on("click", ".sign-up-btn", function () {
+        $(".form").addClass("sign-up-active").removeClass("login-active");
+      });
+
+      $(document).on("click", ".form-cancel", function () {
+        $(".form").removeClass("login-active").removeClass("sign-up-active");
+      });
+
+      /*---------------full-slider-script-----------*/
+      $(document).ready(function () {
+        $("#adaptive").lightSlider({
+          adaptiveHeight: true,
+          auto: true,
+          item: 1,
+          slideMargin: 0,
+          loop: true,
+        });
+      });
+      /*---------------full-slider-script-----------*/
+      $(document).ready(function () {
+        $("#adaptive1").lightSlider({
+          adaptiveHeight: true,
+          auto: true,
+          item: 1,
+          slideMargin: 0,
+          loop: true,
+        });
+      });
+      /*----------------------feature-slider---------------*/
+      $(document).ready(function () {
+        $("#autoWidth").lightSlider({
+          autoWidth: true,
+          loop: true,
+          onSliderLoad: function () {
+            $("#autoWidth").removeClass("cS-hidden");
+          },
+        });
+      });
+      /*--------------for-fix-menu-when-scroll-----------------*/
+      $(windown).scroll(function () {
+        if ($(document).scrollTop() > 50) {
+          $(".nagivation").addClass("fix-nav");
+        } else {
+          $(".nagivation").removeClass("fix-nav");
+        }
+      });
+    </script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+      integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+      integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+      crossorigin="anonymous"
+    ></script>
+
+    <script>
+      var MainImg = document.getElementById(MainImg);
+      var smallimg = document.getElementsByClassName(small - img);
+
+      smallimg[0].onclick = function () {
+        MainImg.src = smallimg[0].src;
+      };
+      smallimg[1].onclick = function () {
+        MainImg.src = smallimg[1].src;
+      };
+      smallimg[2].onclick = function () {
+        MainImg.src = smallimg[2].src;
+      };
+      smallimg[3].onclick = function () {
+        MainImg.src = smallimg[3].src;
+      };
+    </script>
+  </body>
+</html>
